@@ -3,7 +3,7 @@ import React from "react";
 const DevelopedMark = () => {
   return (
     <div>
-      <div className="group flex cursor-pointer text-2xl font-medium tracking-tighter">
+      <div className="group flex cursor-pointer text-2xl font-medium tracking-tighter bg-blend-luminosity">
         <p className="m-0 transition duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-[360deg]">
           ©
         </p>
