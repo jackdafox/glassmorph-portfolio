@@ -1,14 +1,20 @@
-import React from 'react'
-import DevelopedMark from '../common/DevelopedMark'
-import ContactButton from '../common/ContactButton'
+"use client"
+import React, { useEffect } from "react";
+import DevelopedMark from "../common/DevelopedMark";
+import ContactButton from "../common/ContactButton";
 
 const Navbar = () => {
+  useEffect(() => {
+    const position = window.scrollY;
+    console.log(position);
+  }, []);
+
   return (
     <header className="flex justify-between items-center fixed px-24 py-3 w-full z-[100]">
-      <DevelopedMark/>
-      <ContactButton/>
+      <DevelopedMark />
+      <ContactButton />
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
