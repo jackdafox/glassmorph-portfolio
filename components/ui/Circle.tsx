@@ -23,7 +23,17 @@ export default function CircleFollowCursor() {
     }
   };
 
-  // Change the gradient every 3 seconds
+  const changeOpacity = () => {
+    if (circleRef.current) {
+      gsap.to(circleRef.current, {
+        opacity: Math.random(),
+        duration: 1,
+        ease: "none",
+      });
+    }
+  }
+
+  const opacityInterval = setInterval(changeOpacity, 5000);
   const gradientInterval = setInterval(changeGradient, 5000);
 
   useEffect(() => {
@@ -43,14 +53,15 @@ export default function CircleFollowCursor() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       clearInterval(gradientInterval);
+      clearInterval(opacityInterval);
     };
   }, []);
 
   return (
     <div
       ref={circleRef}
-      className="absolute w-[500px] h-[500px] rounded-[50%] pointer-events-none z-[-1] opacity-45"
-      style={{ background: "linear-gradient(135deg, #3498db, #2ecc71)" }}
+      className="fixed w-[500px] h-[500px] rounded-[50%] pointer-events-none z-[-1]"
+      style={{ background: "linear-gradient(135deg, #3498db, #2ecc71)"}}
     ></div>
   );
 }

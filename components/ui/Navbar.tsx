@@ -4,10 +4,10 @@ import ContactButton from '../common/ContactButton'
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between fixed px-4 py-3 w-full z-[100]">
+    <header className="flex justify-between items-center fixed px-24 py-3 w-full z-[100]">
       <DevelopedMark/>
       <ContactButton/>
-    </nav>
+    </header>
   )
 }
 
