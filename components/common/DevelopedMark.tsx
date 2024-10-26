@@ -5,31 +5,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const DevelopedMark = () => {
-  const [textColor, setTextColor] = useState('text-white');
+  const [textColor, setTextColor] = useState("text-white");
 
   useEffect(() => {
-    const sections = [
-      { id: 'white', color: 'text-white' },
-      { id: 'black', color: 'text-black' },
-    ];
-
-    sections.forEach((section) => {
-      ScrollTrigger.create({
-        trigger: `#${section.id}`,
-        start: 'top center', // Trigger when the top of section hits the center of the viewport
-        end: 'bottom center', // Ends when bottom of section hits the center of viewport
-        onEnter: () => setTextColor(section.color),
-        onEnterBack: () => setTextColor(section.color),
-        onLeave: () => setTextColor(section.color), // Optional reset color on leave
-      });
-    });
-
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  }, []);
+    const handleScroll = () => {
+      console.log(window.scrollY);
+  
+      if (window.scrollY < 900 || window.scrollY > 4700) {
+        setTextColor("text-white");
+      } else {
+        setTextColor("text-black");
+      }
+    };
+  
+    // Add the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+  
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); 
 
   return (
     <div>
-      <div className={`${textColor} group flex cursor-pointer text-2xl font-medium tracking-tighter mix-blend-multiply`}>
+      <div className={`${textColor} group flex cursor-pointer text-2xl font-medium tracking-tighter`}>
         <p className="m-0 transition duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-[360deg]">
           ©
         </p>

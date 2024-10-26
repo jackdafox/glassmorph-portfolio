@@ -1,5 +1,7 @@
 import Experiences from "@/components/Experiences";
 import Hero from "@/components/Hero";
+import Profile from "@/components/Profile";
+import Testimony from "@/components/Testimony";
 import CircleFollowCursor from "@/components/ui/Circle";
 import Navbar from "@/components/ui/Navbar";
 import Works from "@/components/Works";
@@ -13,6 +15,8 @@ export default function Home() {
         <Hero />
         <Experiences />
         <Works />
+        <Profile />
+        <Testimony />
       </div>
     </>
   );
