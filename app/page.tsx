@@ -9,9 +9,10 @@ import Works from "@/components/Works";
 export default function Home() {
   return (
     <>
+      <video src={require('@/public/videos/bgVideo3.mp4')} autoPlay muted loop className="fixed object-cover z-[-2] h-screen w-screen brightness-200 grayscale"/>
       <Navbar />
       <CircleFollowCursor />
-      <div className="backdrop-blur-3xl bg-opacity-15 bg-slate-500">
+      <div className="backdrop-blur-md bg-opacity-50">
         <Hero />
         <Experiences />
         <Works />

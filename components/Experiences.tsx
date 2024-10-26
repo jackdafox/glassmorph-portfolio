@@ -4,7 +4,7 @@ import { experiences } from "@/utils/data";
 
 const Experiences = () => {
   return (
-    <div className="flex flex-col items-start mt-96 p-5 px-20 min-h-[50vh]" id="black">
+    <div className="flex flex-col items-start mt-96 p-5 px-20 min-h-[50vh] text-white" id="black">
       <h1 className="text-[8rem] tracking-tighter font-medium leading-[0.75] -ml-2 mb-10">
         MY EXPERIENCES
       </h1>

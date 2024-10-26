@@ -6,35 +6,6 @@ import gsap from "gsap";
 export default function CircleFollowCursor() {
   const circleRef = useRef<HTMLDivElement>(null);
 
-  const changeGradient = () => {
-    if (circleRef.current) {
-      const color1 = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(
-        Math.random() * 255
-      )}, ${Math.floor(Math.random() * 255)}, 1)`;
-      const color2 = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(
-        Math.random() * 255
-      )}, ${Math.floor(Math.random() * 255)}, 1)`;
-
-      gsap.to(circleRef.current, {
-        background: `linear-gradient(135deg, ${color1}, ${color2})`,
-        duration: 1,
-        ease: "none",
-      });
-    }
-  };
-
-  const changeOpacity = () => {
-    if (circleRef.current) {
-      gsap.to(circleRef.current, {
-        opacity: Math.random(),
-        duration: 1,
-        ease: "none",
-      });
-    }
-  }
-
-  const opacityInterval = setInterval(changeOpacity, 5000);
-  const gradientInterval = setInterval(changeGradient, 5000);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -52,16 +23,13 @@ export default function CircleFollowCursor() {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      clearInterval(gradientInterval);
-      clearInterval(opacityInterval);
     };
   }, []);
 
   return (
     <div
       ref={circleRef}
-      className="fixed w-[500px] h-[500px] rounded-[50%] pointer-events-none z-[-1]"
-      style={{ background: "linear-gradient(135deg, #3498db, #2ecc71)"}}
+      className="fixed w-[500px] h-[500px] rounded-[50%] pointer-events-none z-[-1] grayscale blur-xl brightness-200 bg-slate-800"
     ></div>
   );
 }

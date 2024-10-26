@@ -9,14 +9,17 @@ const DevelopedMark = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
   
-      if (window.scrollY < 900 || window.scrollY > 4700) {
-        setTextColor("text-white");
-      } else {
-        setTextColor("text-black");
-      }
+      // if (window.scrollY < 900 || window.scrollY > 4700) {
+      //   setTextColor("text-white");
+      // } else {
+      //   setTextColor("text-black");
+      // }
+
+      setTextColor("text-white");
     };
+
   
     // Add the scroll event listener
     window.addEventListener("scroll", handleScroll);

@@ -3,7 +3,7 @@ import React from "react";
 const Profile = () => {
   return (
     <div
-      className="mt-60 flex justify-center w-full h-full px-20 gap-24"
+      className="mt-60 flex justify-center w-full h-full px-20 gap-24 text-white"
       id="white"
     >
       <div className="bg-gray-700 w-[60rem] h-[48rem]"></div>
