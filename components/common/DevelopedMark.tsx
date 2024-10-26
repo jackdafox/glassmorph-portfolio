@@ -1,33 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const DevelopedMark = () => {
   const [textColor, setTextColor] = useState('text-white');
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        { id: 'section1', color: 'text-white' },
-        { id: 'section2', color: 'text-black' },
-      ];
+    const sections = [
+      { id: 'white', color: 'text-white' },
+      { id: 'black', color: 'text-black' },
+    ];
 
-      let newColor = 'text-white'; // Default color
+    sections.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: `#${section.id}`,
+        start: 'top center', // Trigger when the top of section hits the center of the viewport
+        end: 'bottom center', // Ends when bottom of section hits the center of viewport
+        onEnter: () => setTextColor(section.color),
+        onEnterBack: () => setTextColor(section.color),
+        onLeave: () => setTextColor(section.color), // Optional reset color on leave
+      });
+    });
 
-      for (const section of sections) {
-        const sectionElement = document.getElementById(section.id);
-        const rect = sectionElement!.getBoundingClientRect();
-
-        // Check if the section is in view (adjust the thresholds as needed)
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          newColor = section.color;
-          break;
-        }
-      }
-
-      setTextColor(newColor);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
   return (
