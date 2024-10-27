@@ -13,10 +13,10 @@ const Testimony = () => {
           image="bg-[url('/images/Moreno.jpg')]"
         />
         <TestimonyCard
-          quotes='"Huy is phenomenal. An absolute pleasure to work with!"'
-          name="Pieter Pattyn"
-          title="Founder's Associate @Volup"
-          image="bg-[url('/images/Moreno.jpg')] bg-center"
+          quotes='"gacor kang"'
+          name="Harits Daffa"
+          title="Information System Student @ University of Malaya"
+          image="bg-[url('/images/Harits.jpg')] bg-center"
           classname="mt-36"
         />
         
