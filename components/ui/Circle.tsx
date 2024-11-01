@@ -29,7 +29,7 @@ export default function CircleFollowCursor() {
   return (
     <div
       ref={circleRef}
-      className="fixed w-[500px] h-[500px] rounded-[50%] pointer-events-none z-[-1] grayscale blur-xl brightness-200 bg-slate-800"
+      className="fixed w-[500px] h-[500px] rounded-[50%] pointer-events-none z-[-1] grayscale blur-xl brightness-200 bg-slate-500"
     ></div>
   );
 }
