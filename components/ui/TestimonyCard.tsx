@@ -1,4 +1,9 @@
-import React from "react";
+"use client"
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TestimonyCard = ({
   quotes,
@@ -13,10 +18,35 @@ const TestimonyCard = ({
   image: string;
   classname?: string;
 }) => {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      gsap.fromTo(
+        textRef.current.children,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <div className={`flex w-full h-full px-20 gap-28 text-white ${classname}`}>
-      <div className={`${image} w-[45rem] h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 transition duration-500 ease-in-out`}/>
-      <div className="flex flex-col gap-16 sticky top-20 self-start">
+      <div
+        className={`${image} w-[45rem] h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 transition duration-500 ease-in-out`}
+      />
+      <div className="flex flex-col gap-16 sticky top-20 self-start" ref={textRef}>
         <h1 className="font-medium tracking-tighter text-[3rem] leading-[1] max-w-[50rem] text-wrap">
           {quotes}
         </h1>

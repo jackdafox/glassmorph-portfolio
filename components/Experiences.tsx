@@ -1,11 +1,37 @@
-import React from "react";
-import ExperienceBox from "./ui/ExperienceBox";
+"use client"
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experiences } from "@/utils/data";
+import ExperienceBox from "./ui/ExperienceBox";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Experiences = () => {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 3,
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className="flex flex-col items-start mt-96 p-5 px-20 min-h-[50vh]" id="black">
-      <h1 className="text-[8rem] tracking-tighter font-medium leading-[0.75] -ml-2 mb-10">
+    <div className="flex flex-col items-start mt-20 p-5 px-20 min-h-[50vh]" id="black" ref={titleRef}>
+      <h1
+        className="text-[8rem] tracking-tighter font-medium leading-[0.75] -ml-2 mb-10"
+      >
         MY EXPERIENCES
       </h1>
       {experiences.map((experience) => (

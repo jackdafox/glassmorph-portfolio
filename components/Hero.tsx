@@ -9,31 +9,40 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const spansRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (heroRef.current && textRef.current) {
-      const tl = gsap.timeline();
+    if (heroRef.current && textRef.current && spansRef.current) {
+      document.body.style.overflow = "hidden";
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          // Enable scrolling after animation is complete
+          document.body.style.overflow = "auto";
+        }
+      });
 
       tl.fromTo(
-        heroRef.current,
+        spansRef.current.children,
         { y: 300, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 2,
           ease: "power3.out",
+          stagger: 0.3,
+          pin:true
         }
       ).fromTo(
-        textRef.current,
+        textRef.current.children,
         { y: 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.5,
+          duration: 1,
           ease: "power3.out",
-          delay: 1.2
-        },
-        "-=1.5" // Overlap the start of the text animation with the end of the hero animation
+          stagger: 0.3,
+        }, "1"
       );
     }
   }, []);
@@ -42,17 +51,23 @@ const Hero = () => {
     <div
       className="h-[105vh] flex flex-col justify-end px-20 bg-black opacity-90"
       id="white"
+      ref={heroRef}
     >
       <div className="flex flex-col justify-start p-5 gap-5 mb-12">
-        <h1
-          className="font-[500] text-white text-3xl tracking-tighter"
-          ref={textRef}
-        >
-          Multimedia Student @ Universiti Malaya
-        </h1>
+        <div ref={textRef} className="flex gap-2">
+          <span className="font-[500] text-white text-3xl tracking-tighter">
+            Multimedia Student
+          </span>
+          <span className="font-[500] text-white text-3xl tracking-tighter">
+            @
+          </span>
+          <span className="font-[500] text-white text-3xl tracking-tighter">
+            Universiti Malaya
+          </span>
+        </div>
         <div
           className="flex text-[8rem] gap-10 leading-[0.75] -ml-2 font-[500] text-white tracking-tighter"
-          ref={heroRef}
+          ref={spansRef}
         >
           <span>MUHAMMAD</span>
           <span>DZAKY</span>
