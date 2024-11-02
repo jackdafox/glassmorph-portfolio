@@ -6,7 +6,6 @@ import gsap from "gsap";
 export default function CircleFollowCursor() {
   const circleRef = useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       if (circleRef.current) {
