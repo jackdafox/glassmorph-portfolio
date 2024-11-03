@@ -28,7 +28,7 @@ const Experiences = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-start mt-20 p-5 px-20 min-h-[50vh]" id="black" ref={titleRef}>
+    <div className="flex flex-col items-start mt-20 p-5 px-20 min-h-[50vh] text-white" id="black" ref={titleRef}>
       <h1
         className="text-[8rem] tracking-tighter font-medium leading-[0.75] -ml-2 mb-10"
       >

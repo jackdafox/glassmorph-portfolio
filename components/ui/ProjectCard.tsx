@@ -27,8 +27,8 @@ const ProjectCard = ({
           stagger: 0.2,
           scrollTrigger: {
             trigger: card,
-            start: "top 80%",
-            end: "bottom 20%",
+            start: "top 100%",
+            end: "bottom 50%",
             scrub: true,
           },
         }
@@ -41,7 +41,7 @@ const ProjectCard = ({
       <div>
         <div className="flex gap-3 bg-gray-400 min-h-64 p-3">{children}</div>
       </div>
-      <div className="flex justify-between text-7xl tracking-tighter font-medium mt-2">
+      <div className="flex justify-between text-7xl tracking-tighter font-medium mt-2 text-white">
         <h1>{title}</h1>
         <h1>{year}</h1>
       </div>

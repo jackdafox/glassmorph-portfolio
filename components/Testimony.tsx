@@ -1,6 +1,5 @@
 import React from "react";
 import TestimonyCard from "@/components/ui/TestimonyCard";
-import { testimonials } from "@/utils/data";
 
 const Testimony = () => {
   return (
@@ -10,16 +9,19 @@ const Testimony = () => {
         id="white"
       />
       <div className="bg-black bg-opacity-90">
-        {testimonials.map((testimony) => (
-          <TestimonyCard
-            key={testimony.id}
-            quotes={testimony.quotes}
-            name={testimony.name}
-            title={testimony.title}
-            image={testimony.image}
-            classname={testimony.classname}
-          />
-        ))}
+        <TestimonyCard
+          quotes="Huy is phenomenal. An absolute pleasure to work with!"
+          name="Pieter Pattyn"
+          title="Founder's Associate @Volup"
+          image="bg-[url('/images/Moreno.jpg')]"
+        />
+        <TestimonyCard
+          quotes="gacor kang"
+          name="Harits Daffa"
+          title="Information System Student @ University of Malaya"
+          image="bg-[url('/images/Harits.jpg')]"
+          classname="mt-36"
+        />
       </div>
     </div>
   );

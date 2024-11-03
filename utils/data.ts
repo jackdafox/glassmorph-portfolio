@@ -49,14 +49,14 @@ export const testimonials = [
     quotes: "Huy is phenomenal. An absolute pleasure to work with!",
     name: "Pieter Pattyn",
     title: "Founder's Associate @Volup",
-    image: "bg-[url('/images/Moreno.jpg')",
+    image: "bg-[url('/images/Moreno.jpg')]",
   },
   {
     id: 2,
     quotes: "gacor kang",
     name: "Harits Daffa",
     title: "Information System Student @ University of Malaya",
-    image: "bg-[url('/images/Harits.jpg') bg-center",
+    image: "bg-[url('/images/Harits.jpg')]",
     classname: "mt-36",
   }
 ]

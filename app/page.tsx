@@ -10,9 +10,14 @@ import Works from "@/components/Works";
 export default function Home() {
   return (
     <>
+      <img
+        src="/images/bgBlue.png"
+        alt="hero-bg"
+        className="fixed inset-0 z-[-1] object-cover w-full h-full"
+      />
       <Navbar />
       <CircleFollowCursor />
-      <div className="backdrop-blur-md bg-opacity-50">
+      <div>
         <Hero />
         <Experiences />
         <Works />

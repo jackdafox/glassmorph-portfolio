@@ -24,7 +24,7 @@ const ExperienceBox = ({
         boxRef.current,
         { borderColor: "transparent" },
         {
-          borderColor: "black",
+          borderColor: "white",
           stagger: 0.2,
           scrollTrigger: {
             trigger: boxRef.current,
@@ -59,7 +59,7 @@ const ExperienceBox = ({
       ref={boxRef}
       className={`${
         id < 2 ? "border-y-[1px]" : "border-b-[1px]"
-      } flex justify-between w-full py-5 text-5xl tracking-tighter border-black`}
+      } flex justify-between w-full py-5 text-5xl tracking-tighter border-white`}
     >
       <h1 ref={titleRef}>{title}</h1>
       <h1 ref={locationRef}>{location}</h1>
