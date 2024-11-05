@@ -5,10 +5,10 @@ const Testimony = () => {
   return (
     <div>
       <div
-        className="bg-gradient-to-b from-transparent to-50% to-black w-screen h-[30rem] opacity-90 mt-52"
+        className="bg-gradient-to-b from-transparent to-90% to-black w-screen h-[30rem]"
         id="white"
       />
-      <div className="bg-black bg-opacity-90">
+      <div className="bg-black">
         <TestimonyCard
           quotes="Huy is phenomenal. An absolute pleasure to work with!"
           name="Pieter Pattyn"

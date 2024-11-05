@@ -1,3 +1,5 @@
+import { video } from "framer-motion/client";
+
 export const experiences = [
   {
     id: 1,
@@ -22,18 +24,21 @@ export const works = [
     title: "IDFEST",
     year: 2023,
     category: ["DESIGN", "CONCERT", "CULTURAL"],
+    video: "/videos/IDFEST.mp4",
   },
   {
     id: 2,
     title: "TOST",
     year: 2022,
     category: ["WEB", "DEVELOPMENT", "NEXT.JS"],
+    video: "/videos/MEDKOM PPI.mp4",
   },
   {
     id: 3,
     title: "UNIYEARBOOK",
     year: 2024,
     category: ["WEB", "DEVELOPMENT", "NEXT.JS"],
+    video: "/videos/IDFEST.mp4",
   },
 ];
 

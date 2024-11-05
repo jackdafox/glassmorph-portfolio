@@ -7,7 +7,7 @@ const Footer = () => {
     social: ["LinkedIn", "Instagram", "E-Mail"],
   };
   return (
-    <div className="flex flex-col justify-between items-start bg-black bg-opacity-[90%] px-20 pt-24 pb-5 text-white gap-32">
+    <div className="flex flex-col justify-between items-start bg-black px-20 pt-24 pb-5 text-white gap-32">
       <div className="flex text-white gap-10 text-2xl tracking-tight font-light">
         <div className="flex flex-col">
           {links.main.map((link, index) => (

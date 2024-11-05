@@ -39,7 +39,7 @@ const ProjectCard = ({
   return (
     <div ref={cardRef}>
       <div>
-        <div className="flex gap-3 bg-gray-400 min-h-64 p-3">{children}</div>
+        <div className="h-[30rem] overflow-hidden">{children}</div>        
       </div>
       <div className="flex justify-between text-7xl tracking-tighter font-medium mt-2 text-white">
         <h1>{title}</h1>

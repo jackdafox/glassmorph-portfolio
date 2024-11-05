@@ -24,12 +24,12 @@ const TestimonyCard = ({
     if (textRef.current) {
       gsap.fromTo(
         textRef.current.children,
-        { opacity: 0, y: 20 },
+        { opacity: 0, y: 100 },
         {
           opacity: 1,
           y: 0,
-          stagger: 0.2,
-          duration: 1,
+          stagger: 1,
+          duration: 2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: textRef.current,
@@ -46,13 +46,13 @@ const TestimonyCard = ({
       <div
         className={`${image} w-[45rem] h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 transition duration-500 ease-in-out`}
       />
-      <div className="flex flex-col gap-16 sticky top-20 self-start" ref={textRef}>
+      <div className="flex flex-col gap-5 sticky top-20 self-start" ref={textRef}>
         <h1 className="font-medium tracking-tighter text-[3rem] leading-[1] max-w-[50rem] text-wrap">
           {quotes}
         </h1>
         <div className="flex flex-col mt-5 leading-[1] gap-2 text-white">
-          <h1 className="tracking-tighter text-[2rem] font-medium">{name}</h1>
-          <h1 className="tracking-tighter text-[1.4rem]">{title}</h1>
+          <h1 className="tracking-tighter text-[2rem] font-medium opacity-50">{name}</h1>
+          <h1 className="tracking-tighter text-[1.4rem] opacity-25">{title}</h1>
         </div>
       </div>
     </div>
