@@ -4,11 +4,10 @@ import TestimonyCard from "@/components/ui/TestimonyCard";
 const Testimony = () => {
   return (
     <div>
-      <div
-        className="bg-gradient-to-b from-transparent to-90% to-black w-screen h-[30rem]"
-        id="white"
-      />
-      <div className="bg-black">
+      <div className="mt-56 px-20">
+        <h1 className="text-[8rem] tracking-tighter font-medium leading-[0.75] text-white mb-20">
+          TESTIMONIALS
+        </h1>
         <TestimonyCard
           quotes="Huy is phenomenal. An absolute pleasure to work with!"
           name="Pieter Pattyn"

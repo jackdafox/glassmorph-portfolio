@@ -42,7 +42,7 @@ const TestimonyCard = ({
   }, []);
 
   return (
-    <div className={`flex w-full h-full px-20 gap-28 text-white ${classname}`}>
+    <div className={`flex w-full h-full gap-40 text-white ${classname}`}>
       <div
         className={`${image} w-[45rem] h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 transition duration-500 ease-in-out`}
       />

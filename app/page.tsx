@@ -9,12 +9,7 @@ import Works from "@/components/Works";
 
 export default function Home() {
   return (
-    <>
-      <img
-        src="/images/bgBlue.png"
-        alt="hero-bg"
-        className="fixed inset-0 z-[-1] object-cover w-full h-full"
-      />
+    <div className="bg-blue-900 overflow-hidden opacity-85">
       <Navbar />
       <CircleFollowCursor />
       <div>
@@ -25,6 +20,6 @@ export default function Home() {
         <Testimony />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

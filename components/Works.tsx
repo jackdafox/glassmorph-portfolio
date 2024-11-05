@@ -33,7 +33,7 @@ const Works = () => {
         className="text-[8rem] font-medium tracking-tighter leading-[0.75] -ml-2 mb-10 cursor-default text-white"
         ref={titleRef}
       >
-        WORKS
+        EXPERIENCES
       </h1>
       {works.map((work) => (
         <div key={work.id}>

@@ -19,7 +19,7 @@ const Hero = () => {
         onComplete: () => {
           // Enable scrolling after animation is complete
           document.body.style.overflow = "auto";
-        }
+        },
       });
 
       tl.fromTo(
@@ -31,7 +31,7 @@ const Hero = () => {
           duration: 2,
           ease: "power3.out",
           stagger: 0.3,
-          pin:true
+          pin: true,
         }
       ).fromTo(
         textRef.current.children,
@@ -42,14 +42,15 @@ const Hero = () => {
           duration: 1,
           ease: "power3.out",
           stagger: 0.3,
-        }, "1"
+        },
+        "1"
       );
     }
   }, []);
 
   return (
     <div
-      className="h-[105vh] flex flex-col justify-end px-20 bg-black opacity-90"
+      className="h-[105vh] flex flex-col justify-end px-16"
       id="white"
       ref={heroRef}
     >

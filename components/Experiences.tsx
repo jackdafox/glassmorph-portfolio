@@ -32,7 +32,7 @@ const Experiences = () => {
       <h1
         className="text-[8rem] tracking-tighter font-medium leading-[0.75] -ml-2 mb-10"
       >
-        MY EXPERIENCES
+        WORKS
       </h1>
       {experiences.map((experience) => (
         <ExperienceBox

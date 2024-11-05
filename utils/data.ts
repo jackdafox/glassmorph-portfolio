@@ -28,14 +28,14 @@ export const works = [
   },
   {
     id: 2,
-    title: "TOST",
+    title: "PPI UNIVERSITI MALAYA",
     year: 2022,
-    category: ["WEB", "DEVELOPMENT", "NEXT.JS"],
+    category: ["WEB", "DESIGN", "ORGANIZATION"],
     video: "/videos/MEDKOM PPI.mp4",
   },
   {
     id: 3,
-    title: "UNIYEARBOOK",
+    title: "POERNAMAFEST",
     year: 2024,
     category: ["WEB", "DEVELOPMENT", "NEXT.JS"],
     video: "/videos/IDFEST.mp4",
@@ -43,7 +43,7 @@ export const works = [
 ];
 
 export const profile = {
-  name: "Muhammad Dzaky",
+  name: "MUHAMMAD DZAKY",
   description:
     "Aspiring computer scientist with a focus on digital forensics and cybersecurity. I am a computer science student passionate aboutunderstanding how technology impacts our world and constantly seekingopportunities to expand my knowledge in security practices andforensic analysis. Key areas of interest include digital forensics, cybersecurity essentials, data protection, and privacy, as well asexploring AI and machine learning. While still building my foundation, I am eager to connect with others in the field, learn from real-world experiences, and contribute to projects that enhance digital safety.",
 };
@@ -63,6 +63,5 @@ export const testimonials = [
     title: "Information System Student @ University of Malaya",
     image: "bg-[url('/images/Harits.jpg')]",
     classname: "mt-36",
-  }
-]
-
+  },
+];
