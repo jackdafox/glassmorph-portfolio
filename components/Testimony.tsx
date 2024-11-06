@@ -36,7 +36,7 @@ const Testimony = () => {
         duration: 2,
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "top 80%",
+          start: "top 100%",
           end: "bottom 20%",
           scrub: true,
         },
