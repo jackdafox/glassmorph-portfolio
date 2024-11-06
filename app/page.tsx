@@ -9,7 +9,7 @@ import Works from "@/components/Works";
 
 export default function Home() {
   return (
-    <div className="bg-blue-900 overflow-hidden opacity-85">
+    <div className="bg-blue-900 opacity-85">
       <Navbar />
       <CircleFollowCursor />
       <div>

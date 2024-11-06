@@ -1,13 +1,42 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import TestimonyCard from "@/components/ui/TestimonyCard";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Testimony = () => {
+  const lineRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      lineRef.current,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        transformOrigin: "left center",
+        scrollTrigger: {
+          trigger: lineRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
   return (
     <div>
       <div className="mt-56 px-20">
-        <h1 className="text-[8rem] tracking-tighter font-medium leading-[0.75] text-white mb-20">
-          TESTIMONIALS
-        </h1>
+        <div className="flex items-center gap-10 mb-20">
+          <h1 className="text-[8rem] tracking-tighter font-medium leading-[0.75] text-white">
+            TESTIMONIALS
+          </h1>
+          <div
+            ref={lineRef}
+            className="bg-white h-[15px] w-[70rem] transform scale-x-0"
+          />
+        </div>
         <TestimonyCard
           quotes="Huy is phenomenal. An absolute pleasure to work with!"
           name="Pieter Pattyn"
