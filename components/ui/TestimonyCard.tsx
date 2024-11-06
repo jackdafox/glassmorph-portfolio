@@ -19,6 +19,7 @@ const TestimonyCard = ({
   classname?: string;
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     if (textRef.current) {
@@ -34,18 +35,33 @@ const TestimonyCard = ({
             trigger: textRef.current,
             start: "top 80%",
             end: "bottom 20%",
+            scrub: true,
           },
         }
       );
     }
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (
-    <div
-      className={`flex w-full h-[48rem] gap-20 text-white ${classname}`}
-    >
+    <div className={`flex w-full h-[48rem] gap-20 text-white ${classname}`}>
       <div
-        className={`${image} w-[45rem] h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 transition duration-500 ease-in-out`}
+        className={`${image} w-[45rem] h-[48rem] bg-cover bg-center grayscale hover:grayscale-0`}
+        ref={imageRef}
       />
       <div className="flex flex-col gap-5 sticky top-0 h-48" ref={textRef}>
         <h1 className="font-medium tracking-tighter text-[3rem] leading-[1] max-w-[50rem] text-wrap">

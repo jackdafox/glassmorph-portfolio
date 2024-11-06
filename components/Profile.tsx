@@ -3,12 +3,15 @@ import { profile } from "@/utils/data";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CircleNumber from "./ui/CircleNumber";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Profile = () => {
   const lineRef = useRef(null);
   const nameRef = useRef(null);
+  const titleRef = useRef(null);
+  const imageRef = useRef(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
@@ -19,7 +22,7 @@ const Profile = () => {
       descriptionRef.current.innerHTML = words
         .map((word) => `<span class="word">${word}</span>`)
         .join(" ");
-      
+
       gsap.fromTo(
         ".word",
         { opacity: 0 },
@@ -66,21 +69,53 @@ const Profile = () => {
       }
     );
 
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (
     <div className="flex flex-col items-start px-20 mt-56 gap-20">
-      <div className="flex items-center gap-10">
-        <h1 className="text-[7rem] tracking-tighter font-medium leading-[0.75] text-white">
+      <div className="flex items-center gap-10" ref={titleRef}>
+        <h1 className="text-[6.5rem] tracking-tighter font-medium leading-[0.75] text-white">
           ABOUT ME
         </h1>
+        <CircleNumber order={3} className="aspect-square w-[100px] h-full" margin="-ml-1" />
         <div
           ref={lineRef}
-          className="bg-white h-[15px] w-[70rem] transform scale-x-0"
+          className="bg-white h-[15px] w-[65rem] transform scale-x-0"
         />
       </div>
       <div className="flex justify-center w-full h-full gap-24" id="white">
-        <div className="bg-gray-700 w-[40rem] h-[48rem]"></div>
+        <div className="bg-gray-700 w-[40rem] h-[48rem]" ref={imageRef}></div>
         <div className="flex flex-col gap-16 text-white">
           <h1
             ref={nameRef}

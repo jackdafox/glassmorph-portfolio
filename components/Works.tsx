@@ -5,6 +5,7 @@ import ProjectCard from "./ui/ProjectCard";
 import { works } from "@/utils/data";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CircleNumber from "./ui/CircleNumber";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,10 +16,10 @@ const Works = () => {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-      trigger: titleRef.current,
-      start: "top 80%",
-      end: "bottom 20%",
-      scrub: true,
+        trigger: titleRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
       },
     });
 
@@ -36,16 +37,18 @@ const Works = () => {
 
   return (
     <div className="mt-56 flex flex-col gap-10 px-20" id="white">
-      <div className="flex items-center gap-10 mb-10">
-        <h1
-          className="text-[8rem] font-medium tracking-tighter leading-[0.75] cursor-default text-white"
-          ref={titleRef}
-        >
+      <div className="flex items-center gap-10 mb-10" ref={titleRef}>
+        <h1 className="text-[8rem] font-medium tracking-tighter leading-[0.75] cursor-default text-white">
           EXPERIENCES
         </h1>
+        <CircleNumber
+          order={2}
+          className="aspect-square w-[250px] h-full"
+          margin="-ml-1"
+        />
         <div
           ref={lineRef}
-          className="bg-white h-[15px] w-[70rem] transform scale-x-0"
+          className="bg-white h-[15px] w-full transform scale-x-0"
         />
       </div>
       {works.map((work) => (
