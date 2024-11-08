@@ -10,9 +10,10 @@ const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const spansRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (heroRef.current && textRef.current && spansRef.current) {
+    if (heroRef.current && textRef.current && spansRef.current && videoRef.current) {
       document.body.style.overflow = "hidden";
 
       const tl = gsap.timeline({
@@ -46,10 +47,18 @@ const Hero = () => {
 
   return (
     <div
-      className="h-[105vh] flex flex-col justify-end px-16"
+      className="h-[105vh] flex flex-col justify-end px-16 overflow-hidden"
       id="home"
       ref={heroRef}
     >
+      <video
+        src="/videos/IDFEST.mp4"
+        autoPlay
+        loop
+        muted
+        className="absolute left-0 bottom-0 -z-10 opacity-50"
+        ref={videoRef}
+      />
       <div className="flex flex-col justify-start p-5 gap-5 mb-12">
         <div ref={textRef} className="flex gap-2 overflow-hidden">
           <span className="font-[500] text-white text-3xl tracking-tighter">

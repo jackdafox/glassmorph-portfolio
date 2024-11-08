@@ -31,7 +31,7 @@ export const works = [
     title: "PPI UNIVERSITI MALAYA",
     year: 2022,
     category: ["WEB", "DESIGN", "ORGANIZATION"],
-    video: "/videos/MEDKOM PPI.mp4",
+    video: "/videos/MEDKOM 2_1.mp4",
   },
   {
     id: 3,
