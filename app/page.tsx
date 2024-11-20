@@ -9,10 +9,10 @@ import Works from "@/components/Works";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-blue-900 opacity-85">
       <Navbar />
       <CircleFollowCursor />
-      <div className="backdrop-blur-md bg-opacity-50">
+      <div>
         <Hero />
         <Experiences />
         <Works />
@@ -20,6 +20,6 @@ export default function Home() {
         <Testimony />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
