@@ -1,10 +1,18 @@
 "use client";
+<<<<<<< HEAD
 import React, { useEffect, useRef } from "react";
 import CategoryPill from "./common/CategoryPill";
 import ProjectCard from "./ui/ProjectCard";
 import { works } from "@/utils/data";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+=======
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { experiences } from "@/utils/data";
+import ExperienceBox from "./ui/ExperienceBox";
+>>>>>>> dad1ca54d0a5db9438cb9f387b8efff165202478
 import CircleNumber from "./ui/CircleNumber";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,9 +41,11 @@ const Works = () => {
       { scaleX: 1, opacity: 1, transformOrigin: "left center", duration: 3 },
       "-=1"
     );
+    
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="mt-56 flex flex-col gap-10 px-20" id="white">
       <div className="flex items-center gap-10 mb-10" ref={titleRef}>
         <h1 className="text-[8rem] font-medium tracking-tighter leading-[0.75] cursor-default text-white">
@@ -45,6 +55,29 @@ const Works = () => {
           order={2}
           className="aspect-square w-[250px] h-full"
           margin="-ml-1"
+=======
+    <div
+      className="flex flex-col items-start mt-20 p-5 px-20 min-h-[50vh] text-white"
+      id="black"
+      ref={titleRef}
+    >
+      <div className="flex items-center gap-10 mb-10">
+        <h1 className="text-[8rem] tracking-tighter font-medium leading-[0.75] -ml-2">
+          WORKS
+        </h1>
+        <CircleNumber
+          order={1}
+          className="aspect-square w-[100px] h-full"
+          margin="-ml-1"
+        />
+      </div>
+      {experiences.map((experience) => (
+        <ExperienceBox
+          key={experience.id}
+          id={experience.id}
+          title={experience.title}
+          location={experience.location}
+>>>>>>> dad1ca54d0a5db9438cb9f387b8efff165202478
         />
         <div
           ref={lineRef}
