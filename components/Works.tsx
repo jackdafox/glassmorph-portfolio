@@ -1,20 +1,30 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import CategoryPill from "./common/CategoryPill";
-import ProjectCard from "./ui/ProjectCard";
-import { works } from "@/utils/data";
-import gsap from "gsap";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Works = () => {
+const Experiences = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
+    gsap.fromTo(
       titleRef.current,
       { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 3,
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+        },
+      }
+    );
+    
       {
         opacity: 1,
         duration: 3,
@@ -48,4 +58,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Experiences;

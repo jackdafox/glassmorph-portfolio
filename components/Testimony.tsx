@@ -19,7 +19,28 @@ const Testimony = () => {
             image={testimony.image}
             classname={testimony.classname}
           />
+<<<<<<< Updated upstream
         ))}
+=======
+          <div
+            ref={lineRef}
+            className="bg-white h-[15px] w-[70rem] transform scale-x-0"
+          />
+        </div>
+        <TestimonyCard
+          quotes=""
+          name="Mochammad Moreno"
+          title="Chemistry Student @ Bandung Institute of Technology"
+          image="bg-[url('/images/Moreno_3.jpg')]"
+        />
+        <TestimonyCard
+          quotes="gacor kang"
+          name="Harits Daffa Muzaki"
+          title="Information System Student @ University of Malaya"
+          image="bg-[url('/images/Harits.jpg')]"
+          classname="mt-36"
+        />
+>>>>>>> Stashed changes
       </div>
     </div>
   );

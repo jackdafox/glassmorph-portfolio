@@ -49,7 +49,11 @@ export const testimonials = [
     quotes: "Huy is phenomenal. An absolute pleasure to work with!",
     name: "Pieter Pattyn",
     title: "Founder's Associate @Volup",
+<<<<<<< Updated upstream
     image: "bg-[url('/images/Moreno.jpg')",
+=======
+    image: "bg-[url('/images/Moreno 3.jpg')]",
+>>>>>>> Stashed changes
   },
   {
     id: 2,
