@@ -3,6 +3,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CircleNumber from "./ui/CircleNumber";
+import { works } from "@/utils/data";
+import ProjectCard from "./ui/ProjectCard";
+import CategoryPill from "./common/CategoryPill";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,31 +14,19 @@ const Experiences = () => {
   const lineRef = useRef(null);
 
   useEffect(() => {
-<<<<<<< HEAD
     gsap.fromTo(
-    gsap.fromTo(
-=======
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
-
-    tl.fromTo(
->>>>>>> dad1ca54d0a5db9438cb9f387b8efff165202478
       titleRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 3 }
-    ).fromTo(
+    );
+    gsap.fromTo(
       lineRef.current,
       { scaleX: 0, opacity: 0 },
-      { scaleX: 1, opacity: 1, transformOrigin: "left center", duration: 3 },
-      "-=1"
+      { scaleX: 1, opacity: 1, transformOrigin: "left center", duration: 3 }
     );
-    
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 1 },
       {
         opacity: 1,
         duration: 3,
