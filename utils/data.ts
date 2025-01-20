@@ -1,44 +1,57 @@
-import { video } from "framer-motion/client";
-
-export const experiences = [
+export const works = [
   {
     id: 1,
-    title: "LEAD DESIGNER",
-    location: "IDFEST 2023",
+    title: "TOST",
+    location: "2023",
+    tech: ["REACT", "TAILWINDCSS", "NEXT.JS"],
   },
   {
     id: 2,
-    title: "DESIGNER",
-    location: "POERNAMAFEST",
+    title: "INVENTORY SYSTEM",
+    location: "2024",
+    tech: ["REACT", "TAILWINDCSS", "NEXT.JS"],
   },
   {
     id: 3,
-    title: "VICE LEAD DESIGNER",
-    location: "PPI - UM",
+    title: "UNIYEARBOOK",
+    location: "2024",
+    tech: ["REACT", "TAILWINDCSS", "NEXT.JS"],
+  },
+  {
+    id: 4,
+    title: "TIME TRACKER",
+    location: "2024",
+    tech: ["REACT", "TAILWINDCSS", "NEXT.JS"],
+  },
+  {
+    id: 5,
+    title: "PPI-UM WEBSITE",
+    location: "2023",
+    tech: ["REACT", "TAILWINDCSS", "NEXT.JS"],
   },
 ];
 
-export const works = [
+export const experiences = [
   {
     id: 1,
     title: "IDFEST",
     year: 2023,
     category: ["DESIGN", "CONCERT", "CULTURAL"],
-    video: "/videos/IDFEST.mp4",
+    video: "https://g8p7b7sjok.ufs.sh/f/Zqh06b1WVmYEa4ncvatYtkqvZKPX2V4GpcoLzA0ChrIOQ1nB",
   },
   {
     id: 2,
     title: "PPI UNIVERSITI MALAYA",
     year: 2022,
     category: ["WEB", "DESIGN", "ORGANIZATION"],
-    video: "/videos/MEDKOM 2_1.mp4",
+    video: "https://g8p7b7sjok.ufs.sh/f/Zqh06b1WVmYEKC1954qsJUkyHpxg4Qwcz5bNn2PCAF3DYGoi",
   },
   {
     id: 3,
     title: "POERNAMAFEST",
     year: 2024,
     category: ["WEB", "DEVELOPMENT", "NEXT.JS"],
-    video: "/videos/IDFEST.mp4",
+    video: "https://g8p7b7sjok.ufs.sh/f/Zqh06b1WVmYEa4ncvatYtkqvZKPX2V4GpcoLzA0ChrIOQ1nB",
   },
 ];
 
@@ -54,15 +67,7 @@ export const testimonials = [
     quotes: "Huy is phenomenal. An absolute pleasure to work with!",
     name: "Pieter Pattyn",
     title: "Founder's Associate @Volup",
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    image: "bg-[url('/images/Moreno.jpg')",
-=======
     image: "bg-[url('/images/Moreno 3.jpg')]",
->>>>>>> Stashed changes
-=======
-    image: "bg-[url('/images/Moreno.jpg')]",
->>>>>>> dad1ca54d0a5db9438cb9f387b8efff165202478
   },
   {
     id: 2,

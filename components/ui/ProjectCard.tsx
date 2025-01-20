@@ -27,9 +27,9 @@ const ProjectCard = ({
           stagger: 0.2,
           scrollTrigger: {
             trigger: card,
-            start: "top 100%",
-            end: "bottom 50%",
-            scrub: true,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: 1,
           },
         }
       );
@@ -39,11 +39,13 @@ const ProjectCard = ({
   return (
     <div ref={cardRef}>
       <div>
-        <div className="h-[30rem] overflow-hidden">{children}</div>        
+      <div className="h-[30rem] lg:h-[28rem] md:h-[25rem] sm:h-[22rem] xs:h-[20rem] overflow-hidden">
+        {children}
       </div>
-      <div className="flex justify-between text-7xl tracking-tighter font-medium mt-2 text-white">
-        <h1>{title}</h1>
-        <h1>{year}</h1>
+      </div>
+      <div className="flex justify-between text-2xl lg:text-6xl md:text-5xl sm:text-4xl xs:text-3xl tracking-tighter font-medium mt-2 text-white">
+      <h1 className="break-words">{title}</h1>
+      <h1>{year}</h1>
       </div>
     </div>
   );

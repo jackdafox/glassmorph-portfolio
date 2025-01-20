@@ -55,10 +55,9 @@ const Profile = () => {
 
     gsap.fromTo(
       nameRef.current,
-      { opacity: 0, y: 20 },
+      { opacity: 0 },
       {
         opacity: 1,
-        y: 0,
         duration: 2,
         scrollTrigger: {
           trigger: nameRef.current,
@@ -103,29 +102,42 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-start px-20 mt-56 gap-20">
-      <div className="flex items-center gap-10" ref={titleRef}>
-        <h1 className="text-[6.5rem] tracking-tighter font-medium leading-[0.75] text-white">
+    <div className="flex flex-col items-start px-4 md:px-20 mt-20 md:mt-56 gap-5 md:gap-10">
+      <div
+        className="flex items-center gap-4 md:gap-10 overflow-hidden"
+        ref={titleRef}
+      >
+        <h1 className="text-4xl md:text-[6.5rem] tracking-tighter font-medium leading-[0.75] text-white">
           ABOUT ME
         </h1>
-        <CircleNumber order={3} className="aspect-square w-[100px] h-full" margin="-ml-1" />
-        <div
-          ref={lineRef}
-          className="bg-white h-[15px] w-[65rem] transform scale-x-0"
+        <CircleNumber
+          order={3}
+          className="aspect-square w-[50px] md:w-[100px] h-full"
+          margin="-ml-1"
         />
       </div>
-      <div className="flex justify-center w-full h-full gap-24" id="white">
-        <div className="bg-gray-700 w-[40rem] h-[48rem]" ref={imageRef}></div>
-        <div className="flex flex-col gap-16 text-white">
+      <div
+        ref={lineRef}
+        className="bg-white h-[2px] md:h-[15px] w-full transform scale-x-0"
+      />
+      <div
+        className="flex flex-col md:flex-row justify-center w-full h-full gap-8 md:gap-24"
+        id="white"
+      >
+        <div
+          className="bg-gray-700 w-full md:w-[40rem] h-[20rem] md:h-[48rem]"
+          ref={imageRef}
+        ></div>
+        <div className="flex flex-col gap-8 md:gap-16 text-white">
           <h1
             ref={nameRef}
-            className="font-medium tracking-tighter text-[8rem] leading-[1]"
+            className="font-medium tracking-tighter text-5xl md:text-[8rem] leading-[1]"
           >
             {profile.name}
           </h1>
           <p
             ref={descriptionRef}
-            className="font-normal tracking-tight text-xl max-w-[40rem]"
+            className="font-normal tracking-tight text-base md:text-xl max-w-full md:max-w-[40rem]"
           >
             {profile.description}
           </p>

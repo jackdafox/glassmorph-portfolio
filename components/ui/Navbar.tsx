@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="flex justify-between items-center fixed px-24 py-3 w-full z-[100]"
+      className="flex justify-between items-center fixed px-4 sm:px-8 md:px-16 lg:px-24 py-3 w-full z-[100]"
       id="nav"
     >
       <DevelopedMark />
