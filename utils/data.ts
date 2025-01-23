@@ -43,7 +43,7 @@ export const experiences = [
     year: 2023,
     category: ["DESIGN", "CONCERT", "CULTURAL"],
     video:
-      "https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Idfest.mp4?t=2025-01-22T14%3A05%3A56.732Z",
+      "https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Idfest.mp4?t=2025-01-23T23%3A55%3A02.695Z",
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ export const experiences = [
     year: 2024,
     category: ["CONCERT", "DESIGN", "NEXT.JS"],
     video:
-      "https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Idfest.mp4?t=2025-01-22T14%3A05%3A56.732Z",
+      "https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Idfest.mp4?t=2025-01-23T23%3A55%3A02.695Z",
   },
 ];
 

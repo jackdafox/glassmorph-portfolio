@@ -57,7 +57,7 @@ const Hero = () => {
       ref={heroRef}
     >
       <video
-        src="https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Idfest.mp4?t=2025-01-22T14%3A05%3A56.732Z"
+        src="https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Idfest.mp4?t=2025-01-23T23%3A55%3A02.695Z"
         autoPlay
         loop
         muted
