@@ -121,17 +121,17 @@ const Profile = () => {
         className="bg-white h-[2px] md:h-[15px] w-full transform scale-x-0"
       />
       <div
-        className="flex flex-col md:flex-row justify-center w-full h-full gap-8 md:gap-24"
+        className="flex flex-col lg:flex-row justify-center w-full h-full gap-8 md:gap-24"
         id="white"
       >
         <div
-          className="bg-gray-700 w-full md:w-[40rem] h-[20rem] md:h-[48rem]"
+          className="bg-gray-700 w-full lg:w-[40rem] h-[20rem] md:h-[48rem]"
           ref={imageRef}
         ></div>
         <div className="flex flex-col gap-8 md:gap-16 text-white">
           <h1
             ref={nameRef}
-            className="font-medium tracking-tighter text-5xl md:text-[8rem] leading-[1]"
+            className="font-medium tracking-tighter text-5xl md:text-7xl lg:text-[8rem] leading-[1]"
           >
             {profile.name}
           </h1>

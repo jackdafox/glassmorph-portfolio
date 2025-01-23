@@ -39,13 +39,13 @@ const ProjectCard = ({
   return (
     <div ref={cardRef}>
       <div>
-      <div className="h-[30rem] lg:h-[28rem] md:h-[25rem] sm:h-[22rem] xs:h-[20rem] overflow-hidden">
-        {children}
-      </div>
+        <div className="h-[30rem] lg:h-[28rem] md:h-[25rem] sm:h-[22rem] xs:h-[20rem] overflow-hidden">
+          {children}
+        </div>
       </div>
       <div className="flex justify-between text-2xl lg:text-6xl md:text-5xl sm:text-4xl xs:text-3xl tracking-tighter font-medium mt-2 text-white">
-      <h1 className="break-words">{title}</h1>
-      <h1>{year}</h1>
+        <h1 className="break-words">{title}</h1>
+        <h1>{year}</h1>
       </div>
     </div>
   );

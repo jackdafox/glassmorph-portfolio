@@ -58,6 +58,7 @@ const Works = () => {
             title={work.title}
             location={work.location}
             tech={work.tech}
+            link={work.link}
           />
         ))}
       </div>

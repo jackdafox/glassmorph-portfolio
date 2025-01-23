@@ -4,6 +4,7 @@ import TestimonyCard from "@/components/ui/TestimonyCard";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CircleNumber from "./ui/CircleNumber";
+import { testimonials } from "@/utils/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,17 +65,17 @@ const Testimony = () => {
           />
         </div>
         <TestimonyCard
-          quotes="Huy is phenomenal. An absolute pleasure to work with!"
-          name="Akbar Moreno"
-          title="Chemistry Student @ Institut Teknologi Bandung"
-          image="bg-[url('/images/Moreno_3.jpg')]"
+          quotes={testimonials[0].quotes}
+          name={testimonials[0].name}
+          title={testimonials[0].title}
+          image={testimonials[0].image}
         />
         <TestimonyCard
-          quotes="gacor kang"
-          name="Harits Daffa"
-          title="Information System Student @ University of Malaya"
-          image="bg-[url('/images/Harits.jpg')]"
-          classname="mt-20 md:mt-36"
+          quotes={testimonials[1].quotes}
+          name={testimonials[1].name}
+          title={testimonials[1].title}
+          image={testimonials[1].image}
+          classname="md:mt-20"
         />
       </div>
     </div>

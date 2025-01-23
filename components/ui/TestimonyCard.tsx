@@ -59,8 +59,9 @@ const TestimonyCard = ({
 
   return (
     <div className={`flex flex-col md:flex-row w-full h-auto md:h-[48rem] gap-10 md:gap-20 text-white md:p-0 ${classname}`}>
-      <div
-      className={`${image} w-full md:w-[45rem] h-[30rem] md:h-[48rem] bg-cover bg-center grayscale hover:grayscale-0`}
+      <img
+      src={image}
+      className={`w-full md:w-[35rem] h-[30rem] md:h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 object-cover`}
       ref={imageRef}
       />
       <div className="flex flex-col gap-5 md:sticky top-0 h-auto md:h-48" ref={textRef}>

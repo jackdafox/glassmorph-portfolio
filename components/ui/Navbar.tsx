@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 import DevelopedMark from "../common/DevelopedMark";
-import ContactButton from "../common/ContactButton";
 
 const Navbar = () => {
   useEffect(() => {
@@ -11,11 +10,10 @@ const Navbar = () => {
 
   return (
     <header
-      className="flex justify-between items-center fixed px-4 sm:px-8 md:px-16 lg:px-24 py-3 w-full z-[100]"
+      className="flex justify-between items-center fixed px-4 sm:px-8 md:px-16 lg:px-24 py-5 w-full z-[100]"
       id="nav"
     >
       <DevelopedMark />
-      <ContactButton />
     </header>
   );
 };
