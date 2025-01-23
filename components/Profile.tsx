@@ -94,7 +94,7 @@ const Profile = () => {
         scrollTrigger: {
           trigger: imageRef.current,
           start: "top 80%",
-          end: "bottom 20%",
+          end: "bottom 50%",
           scrub: true,
         },
       }
@@ -102,7 +102,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-start px-4 md:px-20 mt-20 md:mt-56 gap-5 md:gap-10">
+    <div className="flex flex-col items-start px-4 md:px-20 mt-20 md:mt-56 gap-5 md:gap-10" id="about">
       <div
         className="flex items-center gap-4 md:gap-10 overflow-hidden"
         ref={titleRef}
@@ -124,10 +124,11 @@ const Profile = () => {
         className="flex flex-col lg:flex-row justify-center w-full h-full gap-8 md:gap-24"
         id="white"
       >
-        <div
+        <img
+          src="https://zwlkygzhrcaonnqpwpcv.supabase.co/storage/v1/object/public/medias/Dzaky%20Photo.jpg"
           className="bg-gray-700 w-full lg:w-[40rem] h-[20rem] md:h-[48rem]"
           ref={imageRef}
-        ></div>
+        />
         <div className="flex flex-col gap-8 md:gap-16 text-white">
           <h1
             ref={nameRef}

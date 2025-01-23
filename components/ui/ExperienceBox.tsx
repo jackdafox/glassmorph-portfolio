@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,10 +86,11 @@ const ExperienceBox = ({
         </div>
       </div>
       <div className="max-h-full flex lg:block lg:max-h-0 lg:-translate-y-[5.6rem]" ref={locationRef}>
-        <div className="group-hover:translate-y-[5.5rem] ease-in-out transition-all lg:mb-8 bg-white p-1 rounded-full px-7 hidden lg:block">
-          <h1 className="text-right text-black">GO TO PAGE</h1>
+        <div className=" lg:group-hover:translate-y-[5.5rem] ease-in-out transition-all lg:mb-8 bg-white p-1 rounded-full px-5 hidden lg:flex gap-3">
+          <h1 className="text-right text-blue-900 text-[2.5rem]">VISIT</h1>
+          <FaLocationArrow className="text-blue-900 self-center" size={30}/>
         </div>
-        <h1 className="h-fit items-center text-right group-hover:translate-y-[5.5rem] ease-in-out transition-all">
+        <h1 className="h-fit items-center text-right lg:group-hover:translate-y-[5.5rem] ease-in-out transition-all">
           {location}
         </h1>
       </div>

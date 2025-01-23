@@ -37,7 +37,7 @@ const Works = () => {
   return (
     <div
       className="flex flex-col items-start mt-20 p-5 md:px-20 px-4 min-h-[50vh] text-white"
-      id="black"
+      id="works"
       ref={titleRef}
     >
       <div className="flex items-center gap-4 md:gap-10 mb-6 md:mb-10">

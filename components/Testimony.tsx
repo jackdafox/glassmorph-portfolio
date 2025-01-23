@@ -45,7 +45,7 @@ const Testimony = () => {
     );
   }, []);
   return (
-    <div>
+    <div id="testimonials">
       <div className="mt-24 md:mt-56 px-4 md:px-20">
         <div
           className="flex md:flex-row items-center gap-4 md:gap-10 mb-10 md:mb-20"

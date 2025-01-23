@@ -3,8 +3,21 @@ import React from "react";
 
 const Footer = () => {
   const links = {
-    main: ["Home", "Experiences", "Works", "About", "Testimonials"],
-    social: ["LinkedIn", "Instagram", "E-Mail"],
+    main: ["Home", "Works", "Experiences", "About", "Testimonials"],
+    social: [
+      {
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/muhammad-dzaky-892351220/",
+      },
+      {
+        name: "Instagram",
+        link: "https://www.instagram.com/dzxky_/",
+      },
+      {
+        name: "GitHub",
+        link: "https://github.com/jackdafox",
+      },
+    ],
   };
 
   return (
@@ -21,12 +34,14 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-1">
           {links.social.map((link, index) => (
-            <h1
-              key={index}
-              className="text-[#0a1338] hover:text-white transition-colors duration-300 cursor-pointer"
-            >
-              {link}
-            </h1>
+            <Link href={link.link} key={index}>
+              <h1
+                key={index}
+                className="text-[#0a1338] hover:text-white transition-colors duration-300 cursor-pointer"
+              >
+                {link.name}
+              </h1>
+            </Link>
           ))}
         </div>
       </div>

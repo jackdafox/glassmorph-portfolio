@@ -37,7 +37,7 @@ const Experiences = () => {
   return (
     <div
       className="mt-20 md:mt-56 flex flex-col gap-5 md:gap-10 px-4 md:px-20"
-      id="white"
+      id="experiences"
     >
       <div
         className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 md:mb-5"
