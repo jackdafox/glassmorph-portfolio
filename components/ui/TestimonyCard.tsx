@@ -63,7 +63,7 @@ const TestimonyCard = ({
     >
       <img
         src={image}
-        className={`w-full md:w-[35rem] h-[30rem] md:h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 transition-all object-cover`}
+        className={`w-full md:w-[35rem] h-[30rem] md:h-[48rem] bg-cover bg-center grayscale hover:grayscale-0 object-cover`}
         ref={imageRef}
       />
       <div
