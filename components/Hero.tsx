@@ -52,7 +52,7 @@ const Hero = () => {
 
   return (
     <div
-      className="h-[105vh] flex flex-col justify-end px-4 sm:px-8 md:px-16 overflow-hidden"
+      className="h-[105vh] flex flex-col justify-end px-4 sm:px-8 xl:px-16 overflow-hidden"
       id="home"
       ref={heroRef}
     >
@@ -66,18 +66,18 @@ const Hero = () => {
       />
       <div className="flex flex-col justify-start p-3 sm:p-5 gap-3 sm:gap-5 mb-8 sm:mb-12">
         <div ref={textRef} className="flex flex-wrap overflow-hidden">
-          <span className="font-[500] text-white text-lg sm:text-2xl md:text-3xl tracking-tighter">
+          <span className="font-[500] text-white text-lg sm:text-2xl lg:text-3xl tracking-tighter">
             Multimedia Student
           </span>
-          <span className="font-[500] text-white text-lg sm:text-2xl md:text-3xl tracking-tighter mx-2">
+          <span className="font-[500] text-white text-lg sm:text-2xl lg:text-3xl tracking-tighter mx-2">
             @
           </span>
-          <span className="font-[500] text-white text-lg sm:text-2xl md:text-3xl tracking-tighter">
+          <span className="font-[500] text-white text-lg sm:text-2xl lg:text-3xl tracking-tighter">
             Universiti Malaya
           </span>
         </div>
         <div
-          className="flex flex-col sm:flex-row text-[3rem] sm:text-[5rem] md:text-[8rem] gap-2 sm:gap-5 md:gap-10 leading-[0.75] -ml-1 sm:-ml-2 font-[500] text-white tracking-tighter overflow-hidden pb-10"
+          className="flex flex-col sm:flex-row text-[3rem] sm:text-[5rem] xl:text-[8rem] gap-2 sm:gap-5 lg:gap-10 leading-[0.75] -ml-1 sm:-ml-2 font-[500] text-white tracking-tighter overflow-hidden pb-10"
           ref={spansRef}
         >
           <span>MUHAMMAD</span>

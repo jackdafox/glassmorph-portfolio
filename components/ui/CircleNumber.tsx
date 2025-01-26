@@ -29,10 +29,10 @@ const CircleNumber = ({
   return (
     <div
       ref={ref}
-      className={`${className} rounded-[50%] flex justify-center items-center bg-white w-[50px] aspect-square sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]`}
+      className={`${className} rounded-[50%] flex justify-center items-center bg-white w-[40px] aspect-square sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]`}
     >
       <h1
-      className={`text-3xl sm:text-5xl md:text-7xl leading-[0.75] ${margin} text-blue-900 transition-all ease-out`}
+      className={`text-3xl sm:text-5xl md:text-7xl leading-[0.75] ${margin} text-blue-900 transition-all ease-out ml-[0.035rem]`}
       >
       {currentNumber}
       </h1>

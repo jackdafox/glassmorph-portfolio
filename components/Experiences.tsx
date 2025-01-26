@@ -40,19 +40,16 @@ const Experiences = () => {
       id="experiences"
     >
       <div
-        className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 md:mb-5"
+        className="flex items-center gap-4 md:gap-10 overflow-hidden"
         ref={titleRef}
       >
-        <div className="flex items-center md:gap-10 gap-2">
-          <h1 className="text-4xl md:text-[8rem] font-medium tracking-tighter leading-[0.75] cursor-default text-white">
-            EXPERIENCES
-          </h1>
-          <CircleNumber
-            order={2}
-            className="aspect-square w-[36px] md:w-[100px] h-full"
-            margin="md:-ml-1"
-          />
-        </div>
+        <h1 className="text-4xl md:text-[6.5rem] tracking-tighter font-medium text-white">
+          EXPERIENCES
+        </h1>
+        <CircleNumber
+          order={2}
+          margin="-ml-1"
+        />
       </div>
       <div
         ref={lineRef}

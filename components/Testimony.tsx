@@ -46,24 +46,23 @@ const Testimony = () => {
   }, []);
   return (
     <div id="testimonials">
-      <div className="mt-24 md:mt-56 px-4 md:px-20">
+      <div className="mt-24 xl:mt-56 px-4 md:px-20">
         <div
-          className="flex md:flex-row items-center gap-4 md:gap-10 mb-10 md:mb-20"
+          className="flex items-center gap-4 md:gap-10 overflow-hidden"
           ref={titleRef}
         >
-          <h1 className="text-4xl md:text-[8rem] tracking-tighter font-medium leading-[0.75] text-white">
-            TESTIMONIALS
+          <h1 className="text-4xl md:text-[6.5rem] tracking-tighter font-medium leading-[0.75] text-white">
+            TESTIMONY
           </h1>
           <CircleNumber
             order={4}
-            className="aspect-square w-[35px] md:w-[200px] h-full"
-            margin="md:-ml-1"
-          />
-          <div
-            ref={lineRef}
-            className="bg-white h-[8px] md:h-[15px] w-full md:w-[70rem] transform scale-x-0 hidden md:block"
+            margin="-ml-[0.1rem]"
           />
         </div>
+        <div
+          ref={lineRef}
+          className="bg-white h-[2px] md:h-[15px] w-full transform scale-x-0 my-5 xl:my-10"
+        />
         <TestimonyCard
           quotes={testimonials[0].quotes}
           name={testimonials[0].name}
@@ -75,7 +74,7 @@ const Testimony = () => {
           name={testimonials[1].name}
           title={testimonials[1].title}
           image={testimonials[1].image}
-          classname="md:mt-20"
+          classname="mt-20"
         />
       </div>
     </div>

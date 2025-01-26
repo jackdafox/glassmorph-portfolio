@@ -72,7 +72,7 @@ const ExperienceBox = ({
       <div className="flex gap-3 md:gap-5">
         <h1 ref={titleRef} className="text-md leading-none lg:text-5xl">{title}</h1>
         <div
-          className="hidden lg:flex md:flex-wrap gap-2 md:gap-3"
+          className="hidden xl:flex md:flex-wrap gap-2 md:gap-3"
           ref={techRef}
         >
           {tech.map((t, index) => (
