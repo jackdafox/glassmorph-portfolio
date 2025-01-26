@@ -52,7 +52,7 @@ const Hero = () => {
 
   return (
     <div
-      className="h-[105dvh] flex flex-col justify-end px-4 sm:px-8 xl:px-16 overflow-hidden"
+      className="h-[105svh] flex flex-col justify-end px-4 sm:px-8 xl:px-16 overflow-hidden"
       id="home"
       ref={heroRef}
     >
