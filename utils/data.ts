@@ -72,14 +72,14 @@ export const profile = {
 export const testimonials = [
   {
     id: 1,
-    quotes: "Huy is phenomenal. An absolute pleasure to work with!",
+    quotes: "Dzaky is phenomenal. An absolute pleasure to work with!",
     name: "Mas Mochammad Akbar Moreno",
     title: "Science Student @ Institut Teknologi Bandung",
-    image: "https://g8p7b7sjok.ufs.sh/f/Zqh06b1WVmYEy0HAJN3eMU1o8Oqwfrl0FhYuK7jJG3HzQcRN",
+    image: "https://g8p7b7sjok.ufs.sh/f/Zqh06b1WVmYEUscvlHyECzGIe4lykq5YBaonjg98FLNVXrmP",
   },
   {
     id: 2,
-    quotes: "gacor kang",
+    quotes: "Their keen eye for design, attention to detail, and ability to create intuitive user experiences made a significant impact on our project. Highly recommend!",
     name: "Harits Daffa",
     title: "Information System Student @ University of Malaya",
     image: "https://g8p7b7sjok.ufs.sh/f/Zqh06b1WVmYEUsru8l4ECzGIe4lykq5YBaonjg98FLNVXrmP",
